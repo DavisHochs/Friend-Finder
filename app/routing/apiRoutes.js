@@ -18,8 +18,8 @@ app.post('/api/survey', function(req, res) {
         let difference = 0;
             
         for (let i = 0; i < friend.scores.length; i++) {
-            thisTotal += Math.abs(friend.scores[i] - newFriend.scores[i]);
-            console.log(thisTotal);
+            difference += Math.abs(friend.scores[i] - newFriend[i]);
+            console.log(difference);
         }
         
         if (difference < total) {

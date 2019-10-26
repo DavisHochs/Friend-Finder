@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('select');
         var instances = M.FormSelect.init(elems, {});
-  });
+        
+    });
+        $(document).ready(function(){
+        $('.modal').modal();
+        
+        });
     </script>
 </head>
 <body>
@@ -50,7 +56,7 @@
                         <option value="5">Strongly Agree</option>
 
                     </select>
-                    <label>Question 1</label>
+                    <label>I do not become defensive when criticized.</label>
                 </div>
                 <div class="form-group input-field col s12">
                         <select id="q2"> 
@@ -61,7 +67,7 @@
                                 <option value="4">Agree</option>
                                 <option value="5">Strongly Agree</option>
                         </select>
-                    <label>Question 2</label>
+                    <label>I can stay calm under pressure.</label>
                 </div>
                 <div class="form-group input-field col s12">
                     <select id="q3">
@@ -72,7 +78,7 @@
                             <option value="4">Agree</option>
                             <option value="5">Strongly Agree</option>
                         </select>
-                        <label>Question 3</label>
+                        <label>I handle setbacks effectively.</label>
                 </div>
                     <div class="form-group input-field col s12">
                         <select id="q4">
@@ -83,7 +89,7 @@
                                 <option value="4">Agree</option>
                                 <option value="5">Strongly Agree</option>
                         </select>
-                        <label>Question 4</label>
+                        <label>I utilize criticism and other feedback for growth.</label>
                     </div>
           </div>
           <div class="row center-align">
@@ -96,7 +102,7 @@
                             <option value="4">Agree</option>
                             <option value="5">Strongly Agree</option>
                     </select>
-                    <label>Question 5</label>
+                    <label>I am positive.</label>
                 </div>
                 <div class="form-group input-field col s12">
                         <select id="q6">
@@ -107,7 +113,7 @@
                                 <option value="4">Agree</option>
                                 <option value="5">Strongly Agree</option>
                         </select>
-                    <label>Question 6</label>
+                    <label>I maintain a sense of humor.</label>
                 </div>
                 <div class="form-group input-field col s12">
                     <select id="q7">
@@ -118,7 +124,7 @@
                             <option value="4">Agree</option>
                             <option value="5">Strongly Agree</option>
                         </select>
-                        <label>Question 7</label>
+                        <label>I try to see things from another’s perspective.</label>
                 </div>
                     <div class="form-group input-field col s12">
                         <select id="q8">
@@ -129,7 +135,7 @@
                                 <option value="4">Agree</option>
                                 <option value="5">Strongly Agree</option>
                         </select>
-                        <label>Question 8</label>
+                        <label>I recognize how my behavior affects others.</label>
                     </div>
                     <div class="form-group input-field col s12">
                             <select id="q9">
@@ -140,7 +146,7 @@
                                     <option value="4">Agree</option>
                                     <option value="5">Strongly Agree</option>
                                 </select>
-                                <label>Question 9</label>
+                                <label>I have big dreams.</label>
                         </div>
                             <div class="form-group input-field col s12">
                                 <select id="q10">
@@ -151,20 +157,24 @@
                                         <option value="4">Agree</option>
                                         <option value="5">Strongly Agree</option>
                                 </select>
-                                <label>Question 10</label>
+                                <label>I believe in myself.</label>
                             </div>
           
-                <button class="btn waves-effect waves-light" id="form_submit" type="submit">Submit<i class="material-icons right">send</i></button>
+                <button class="btn waves-effect waves-light modal-trigger" data-target="modal1" id="form_submit" type="submit">Submit<i class="material-icons right">send</i></button>
         </form>
     </div>
 
-    <div id="modal1" class="modal">
+    <div class="modal fade" id="modal1">
         <div class="modal-content">
-          <h4>You have a match!</h4>
-          <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            <div class="modal-header">
+                <h1>New Friend!</h1>
+            </div>
+            <div class="modal-body">
+                <h3 id="match-name"></h3>
+            </div>
+            <div class="modal-footer">
+                <a href="/survey" class="modal-close waves-effect waves-green btn-flat">Take Survey Again!</a>
+            </div>
         </div>
       </div>
 
@@ -176,8 +186,12 @@
             }
         return isValid;
     }
+    
+    
+
     $("#form_submit").on("click", function(event) {
         event.preventDefault();
+
         
         if(valid()) {
             let newFriend = {
@@ -216,13 +230,18 @@
                 $("#q8").val("");
                 $("#q9").val("");
                 $("#q10").val("");
-                showModal(data);
+                modalPopup(data);
                 
             });
         } else {
             alert('please fill in the name field!');
         }
     })
+
+    function modalPopup(info) {
+        $("#match-name").text(info.match);
+        $("#modal1").modal('open');
+    }
     
 
     </script>
