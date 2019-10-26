@@ -167,10 +167,11 @@
     <div class="modal fade" id="modal1">
         <div class="modal-content">
             <div class="modal-header">
-                <h1>New Friend!</h1>
+                <h2>New Friend!</h2>
             </div>
             <div class="modal-body">
                 <h3 id="match-name"></h3>
+                <img id="match-pic" alt="match-picture" height=150px width=150px>
             </div>
             <div class="modal-footer">
                 <a href="/survey" class="modal-close waves-effect waves-green btn-flat">Take Survey Again!</a>
@@ -240,6 +241,7 @@
 
     function modalPopup(info) {
         $("#match-name").text(info.match);
+        $('#match-pic').attr('src', info.pic);
         $("#modal1").modal('open');
     }
     

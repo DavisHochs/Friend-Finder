@@ -13,6 +13,7 @@ app.post('/api/survey', function(req, res) {
     let newFriend = req.body.scores;
     let total = 50;
     let match = '';
+    let pic = '';
 
     for (const friend of friends) {
         let difference = 0;
@@ -25,10 +26,11 @@ app.post('/api/survey', function(req, res) {
         if (difference < total) {
             total = difference;
             match = friend.name;
+            pic = friend.photo;
         }
     }
 
-    res.json({total, match});
+    res.json({total, match, pic});
 });
 
 
