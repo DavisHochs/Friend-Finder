@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, {});
+  });
+    </script>
+</head>
+<body>
+        
+    <div class="container">
+        <div class="col s6 z-depth-1 center-align pink lighten-4 banner">
+            <h1>Friend Finder</h1>
+            <i class="medium material-icons">face</i>
+        </div>
+    </div>
+    <br>
+    <br>
+  <div class="container">
+        <form class="col s6 center-align">
+          <div class="row center-align">
+            <div class="form-group input-field col s6">
+              <input placeholder="John Smith" id="first_name" type="text" class="validate"> 
+              <label for="first_name">Name</label>
+            </div>
+            <div class="form-group input-field col s6">
+                <input placeholder="www.imgur.com" id="photo_link" type="text" class="validate">
+                <label for="photo_link">Link to Image</label>
+            </div>
+          </div>
+          <div class="row center-align">
+                <div class="form-group input-field col s12">
+                    <select id="q1">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+
+                    </select>
+                    <label>Question 1</label>
+                </div>
+                <div class="form-group input-field col s12">
+                        <select id="q2"> 
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Strongly Disagree</option>
+                                <option value="2">Disagree</option>
+                                <option value="3">Neutral</option>
+                                <option value="4">Agree</option>
+                                <option value="5">Strongly Agree</option>
+                        </select>
+                    <label>Question 2</label>
+                </div>
+                <div class="form-group input-field col s12">
+                    <select id="q3">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Strongly Disagree</option>
+                            <option value="2">Disagree</option>
+                            <option value="3">Neutral</option>
+                            <option value="4">Agree</option>
+                            <option value="5">Strongly Agree</option>
+                        </select>
+                        <label>Question 3</label>
+                </div>
+                    <div class="form-group input-field col s12">
+                        <select id="q4">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Strongly Disagree</option>
+                                <option value="2">Disagree</option>
+                                <option value="3">Neutral</option>
+                                <option value="4">Agree</option>
+                                <option value="5">Strongly Agree</option>
+                        </select>
+                        <label>Question 4</label>
+                    </div>
+          </div>
+          <div class="row center-align">
+                <div class="form-group input-field col s12">
+                    <select id="q5">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Strongly Disagree</option>
+                            <option value="2">Disagree</option>
+                            <option value="3">Neutral</option>
+                            <option value="4">Agree</option>
+                            <option value="5">Strongly Agree</option>
+                    </select>
+                    <label>Question 5</label>
+                </div>
+                <div class="form-group input-field col s12">
+                        <select id="q6">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Strongly Disagree</option>
+                                <option value="2">Disagree</option>
+                                <option value="3">Neutral</option>
+                                <option value="4">Agree</option>
+                                <option value="5">Strongly Agree</option>
+                        </select>
+                    <label>Question 6</label>
+                </div>
+                <div class="form-group input-field col s12">
+                    <select id="q7">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Strongly Disagree</option>
+                            <option value="2">Disagree</option>
+                            <option value="3">Neutral</option>
+                            <option value="4">Agree</option>
+                            <option value="5">Strongly Agree</option>
+                        </select>
+                        <label>Question 7</label>
+                </div>
+                    <div class="form-group input-field col s12">
+                        <select id="q8">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Strongly Disagree</option>
+                                <option value="2">Disagree</option>
+                                <option value="3">Neutral</option>
+                                <option value="4">Agree</option>
+                                <option value="5">Strongly Agree</option>
+                        </select>
+                        <label>Question 8</label>
+                    </div>
+                    <div class="form-group input-field col s12">
+                            <select id="q9">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Strongly Disagree</option>
+                                    <option value="2">Disagree</option>
+                                    <option value="3">Neutral</option>
+                                    <option value="4">Agree</option>
+                                    <option value="5">Strongly Agree</option>
+                                </select>
+                                <label>Question 9</label>
+                        </div>
+                            <div class="form-group input-field col s12">
+                                <select id="q10">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">Strongly Disagree</option>
+                                        <option value="2">Disagree</option>
+                                        <option value="3">Neutral</option>
+                                        <option value="4">Agree</option>
+                                        <option value="5">Strongly Agree</option>
+                                </select>
+                                <label>Question 10</label>
+                            </div>
+          
+                <button class="btn waves-effect waves-light" id="form_submit" type="submit">Submit<i class="material-icons right">send</i></button>
+        </form>
+    </div>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>You have a match!</h4>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+
+    <script type="text/javascript">
+        function valid() {
+            let isValid = true;
+            if ($("#first_name").val() === "") {
+                isValid = false;
+            }
+        return isValid;
+    }
+    $("#form_submit").on("click", function(event) {
+        event.preventDefault();
+        
+        if(valid()) {
+            let newFriend = {
+            name:  $("#first_name").val().trim(),
+            photo: $("#photo_link").val().trim(),
+            scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            }
+            
+
+            
+            
+            $.post("/api/survey", newFriend, function(data) {
+                if (data) {
+                    console.log(data);
+                }
+                // Clear the form when submitting
+                $("#nameOfPerson").val("");
+                $("#q1").val("");
+                $("#q2").val("");
+                $("#q3").val("");
+                $("#q4").val("");
+                $("#q5").val("");
+                $("#q6").val("");
+                $("#q7").val("");
+                $("#q8").val("");
+                $("#q9").val("");
+                $("#q10").val("");
+                showModal(data);
+                
+            });
+        } else {
+            alert('please fill in the name field!');
+        }
+    })
+    
+
+    </script>
+</body>
+</html>
