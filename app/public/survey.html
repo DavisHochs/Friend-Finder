@@ -23,144 +23,154 @@
         });
     </script>
 </head>
-<body>
-        
+<body>    
     <div class="container">
         <div class="col s6 z-depth-1 center-align pink lighten-4 banner">
             <h1>Friend Finder</h1>
             <i class="medium material-icons">face</i>
         </div>
     </div>
+    
     <br>
     <br>
-  <div class="container">
+
+    <div class="container">
         <form class="col s6 center-align">
           <div class="row center-align">
             <div class="form-group input-field col s6">
-              <input placeholder="John Smith" id="first_name" type="text" class="validate"> 
-              <label for="first_name">Name</label>
+                <input placeholder="John Smith" id="first_name" type="text" class="validate"> 
+                <label for="first_name">Name</label>
             </div>
             <div class="form-group input-field col s6">
                 <input placeholder="www.imgur.com" id="photo_link" type="text" class="validate">
                 <label for="photo_link">Link to Image</label>
             </div>
-          </div>
-          <div class="row center-align">
-                <div class="form-group input-field col s12">
-                    <select id="q1">
+        </div>
+        
+        <div class="row center-align">
+            <div class="form-group input-field col s12">
+                <select id="q1" required>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                </select>
+                <label>I do not become defensive when criticized.</label>
+            </div>
+                
+            <div class="form-group input-field col s12">
+                <select id="q2" required> 
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
                         <option value="3">Neutral</option>
                         <option value="4">Agree</option>
                         <option value="5">Strongly Agree</option>
+                </select>
+                <label>I can stay calm under pressure.</label>
+            </div>
 
-                    </select>
-                    <label>I do not become defensive when criticized.</label>
-                </div>
-                <div class="form-group input-field col s12">
-                        <select id="q2"> 
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Strongly Disagree</option>
-                                <option value="2">Disagree</option>
-                                <option value="3">Neutral</option>
-                                <option value="4">Agree</option>
-                                <option value="5">Strongly Agree</option>
-                        </select>
-                    <label>I can stay calm under pressure.</label>
-                </div>
-                <div class="form-group input-field col s12">
-                    <select id="q3">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Strongly Disagree</option>
-                            <option value="2">Disagree</option>
-                            <option value="3">Neutral</option>
-                            <option value="4">Agree</option>
-                            <option value="5">Strongly Agree</option>
-                        </select>
-                        <label>I handle setbacks effectively.</label>
-                </div>
-                    <div class="form-group input-field col s12">
-                        <select id="q4">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Strongly Disagree</option>
-                                <option value="2">Disagree</option>
-                                <option value="3">Neutral</option>
-                                <option value="4">Agree</option>
-                                <option value="5">Strongly Agree</option>
-                        </select>
-                        <label>I utilize criticism and other feedback for growth.</label>
-                    </div>
-          </div>
-          <div class="row center-align">
-                <div class="form-group input-field col s12">
-                    <select id="q5">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Strongly Disagree</option>
-                            <option value="2">Disagree</option>
-                            <option value="3">Neutral</option>
-                            <option value="4">Agree</option>
-                            <option value="5">Strongly Agree</option>
-                    </select>
-                    <label>I am positive.</label>
-                </div>
-                <div class="form-group input-field col s12">
-                        <select id="q6">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Strongly Disagree</option>
-                                <option value="2">Disagree</option>
-                                <option value="3">Neutral</option>
-                                <option value="4">Agree</option>
-                                <option value="5">Strongly Agree</option>
-                        </select>
-                    <label>I maintain a sense of humor.</label>
-                </div>
-                <div class="form-group input-field col s12">
-                    <select id="q7">
-                            <option value="" disabled selected>Choose your option</option>
-                            <option value="1">Strongly Disagree</option>
-                            <option value="2">Disagree</option>
-                            <option value="3">Neutral</option>
-                            <option value="4">Agree</option>
-                            <option value="5">Strongly Agree</option>
-                        </select>
-                        <label>I try to see things from another’s perspective.</label>
-                </div>
-                    <div class="form-group input-field col s12">
-                        <select id="q8">
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Strongly Disagree</option>
-                                <option value="2">Disagree</option>
-                                <option value="3">Neutral</option>
-                                <option value="4">Agree</option>
-                                <option value="5">Strongly Agree</option>
-                        </select>
-                        <label>I recognize how my behavior affects others.</label>
-                    </div>
-                    <div class="form-group input-field col s12">
-                            <select id="q9">
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Strongly Disagree</option>
-                                    <option value="2">Disagree</option>
-                                    <option value="3">Neutral</option>
-                                    <option value="4">Agree</option>
-                                    <option value="5">Strongly Agree</option>
-                                </select>
-                                <label>I have big dreams.</label>
-                        </div>
-                            <div class="form-group input-field col s12">
-                                <select id="q10">
-                                        <option value="" disabled selected>Choose your option</option>
-                                        <option value="1">Strongly Disagree</option>
-                                        <option value="2">Disagree</option>
-                                        <option value="3">Neutral</option>
-                                        <option value="4">Agree</option>
-                                        <option value="5">Strongly Agree</option>
-                                </select>
-                                <label>I believe in myself.</label>
-                            </div>
+            <div class="form-group input-field col s12">
+                <select id="q3">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                </select>
+                <label>I handle setbacks effectively.</label>
+            </div>
+
+            <div class="form-group input-field col s12">
+                <select id="q4">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                </select>
+                <label>I utilize criticism and other feedback for growth.</label>
+            </div>
+            
+            <div class="form-group input-field col s12">
+                <select id="q5">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                </select>
+                <label>I am positive.</label>
+            </div>
+
+            <div class="form-group input-field col s12">
+                <select id="q6">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                </select>
+                <label>I maintain a sense of humor.</label>
+            </div>
+
+            <div class="form-group input-field col s12">
+                <select id="q7">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                </select>
+                <label>I try to see things from another’s perspective.</label>
+            </div>
+
+            <div class="form-group input-field col s12">
+                <select id="q8">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                </select>
+                <label>I recognize how my behavior affects others.</label>
+            </div>
+
+            <div class="form-group input-field col s12">
+                <select id="q9">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                </select>
+                <label>I have big dreams.</label>
+            </div>
+                    
+            <div class="form-group input-field col s12">
+                <select id="q10">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Strongly Disagree</option>
+                    <option value="2">Disagree</option>
+                    <option value="3">Neutral</option>
+                    <option value="4">Agree</option>
+                    <option value="5">Strongly Agree</option>
+                </select>
+                <label>I believe in myself.</label>
+            </div>
+
+        </div>
           
-                <button class="btn waves-effect waves-light modal-trigger" data-target="modal1" id="form_submit" type="submit">Submit<i class="material-icons right">send</i></button>
+        <button class="btn pink darken-3 waves-effect waves-light modal-trigger" data-target="modal1" id="form_submit" type="submit">Submit<i class="material-icons right">send</i></button>
         </form>
     </div>
 
